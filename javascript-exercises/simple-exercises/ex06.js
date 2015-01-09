@@ -13,6 +13,5 @@ var reverse = function(string){
   }
   return finished;
 };
-
 console.log(reverse('Joe Olenick'));
 console.log(reverse('Joe Olenick Again'));

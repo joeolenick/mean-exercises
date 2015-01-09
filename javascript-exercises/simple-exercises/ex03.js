@@ -14,8 +14,6 @@ var identifyVowel = function(char){
   }
 };
 
-
-console.log(identifyVowel("ABV")); //returns error
 console.log(identifyVowel("a")); //returns true
 console.log(identifyVowel("A")); //returns true
 console.log(identifyVowel("d")); //returns false
