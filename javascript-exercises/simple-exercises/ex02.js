@@ -7,4 +7,4 @@ var maxOfThree = function(num1, num2, num3){
   return Math.max(num1, num2, num3);
 };
 
-console.log(maxOfThree(1,2,3))
+console.log(maxOfThree(1,2,3));

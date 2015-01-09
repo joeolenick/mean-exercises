@@ -22,5 +22,5 @@ var multiply = function(array){
   return total;
 };
 
-sum(numbers);
-multiply(numbers);
+console.log(sum(numbers));
+console.log(multiply(numbers));

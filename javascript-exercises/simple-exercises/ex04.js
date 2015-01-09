@@ -25,4 +25,4 @@ var translate = function(word) {
   return rovarspraketString;
 };
 
-console.log(translate('this is fun'));
+console.log(translate('this is fun')); 
