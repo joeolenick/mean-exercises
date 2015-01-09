@@ -4,17 +4,15 @@ For example, reverse("jag testar") should return the string "ratset gaj".
 */
 
 // breaking the string apart
-var reversed = [];
-var finished = "";
 
-   var reverse = function(string){
-   for (i = string.length; i > 0; i--){
-     reversed.push(string.charAt(i-1));
-   }
-
-// putting it back together.
-  for (i = 0; i < reversed.length; i++){
-    finished += reversed[i];
-}
-return finished;
+var reverse = function(string){
+  var finished = '';
+  if (!string) throw new Error('REVERSE: null passed to reverse');
+  for (var i = string.length - 1; i >= 0; i--){
+    finished += string[i];
+  }
+  return finished;
 };
+
+console.log(reverse('Joe Olenick'));
+console.log(reverse('Joe Olenick Again'));

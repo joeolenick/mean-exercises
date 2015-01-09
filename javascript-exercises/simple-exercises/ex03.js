@@ -5,14 +5,15 @@ if it is a vowel, false otherwise.
 */
 
 var identifyVowel = function(char){
-  if(char.length > 1){
-    return "Not a valid input, character limit of 1";
-  }else if(char.toLowerCase() === 'a' | 'e' | 'i' | 'o'| 'u' | 'y'){
+  if(!char || char.length > 1)
+    throw new Error("Input not invalid.")
+  else if(char.toLowerCase() === 'a' | 'e' | 'i' | 'o'| 'u' | 'y'){
     return true;
   }else{
     return false;
   }
 };
+
 
 console.log(identifyVowel("ABV")); //returns error
 console.log(identifyVowel("a")); //returns true
