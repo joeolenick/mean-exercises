@@ -3,8 +3,6 @@
 For example, reverse("jag testar") should return the string "ratset gaj".
 */
 
-// breaking the string apart
-
 var reverse = function(string){
   var finished = '';
   if (!string) throw new Error('REVERSE: null passed to reverse');
