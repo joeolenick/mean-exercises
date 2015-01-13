@@ -1,6 +1,18 @@
 # Intro to Functions
 The building blocks for ALL programs. ANY calculations that you do in your code should be a function.
 
+## Functions Conceptually
+
+### The Concept
+Functions take inputs and either outputs data or performs actions
+![Function Concept](img/functionFrame.png)
+### Ex 1
+In this example we have a function `multiply()` that takes 2 inputs and gives 1 output.
+![Function Concept](img/functionDemo1.png)
+### Ex 2
+In this example we have a function `verifyEmail()` that takes 2 inputs and and performs some actions.
+![Function Concept](img/functionDemo2.png)
+
 ## Function Declaration Syntax
 ### Style 1
 ```javascript
