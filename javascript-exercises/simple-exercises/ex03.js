@@ -23,3 +23,23 @@ var identifyVowel = function(char){
 console.log(identifyVowel("a")); //returns true
 console.log(identifyVowel("E")); //returns true
 console.log(identifyVowel("d")); //returns false
+
+
+/*
+How someone else did it with an array instead of Or Operators.
+var isVowel = function(char) {
+// y doesn't count :D
+var vowels = ['a', 'e', 'i', 'o', 'u'];
+// the index:  0    1    2    3    4
+
+// Because 'vowels' is an array, it has a
+// method called 'indexOf'. You can pass
+// indexOf an element and it will tell you
+// at which index that element is at inside of
+// the array. If not there, it returns -1.
+
+if (vowels.indexOf(char) > -1) {
+return true;
+}
+};
+*/

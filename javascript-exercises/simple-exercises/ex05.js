@@ -8,7 +8,7 @@ var numbers = [1,2,3,4];
 
 var sum = function(array){
   var total = 0;
-  for(i=0; i< array.length; i++){
+  for(var i=0; i< array.length; i++){
     total += array[i];
   }
   return total;
@@ -16,7 +16,7 @@ var sum = function(array){
 
 var multiply = function(array){
   var total = 1;
-  for(i=0; i< array.length; i++){
+  for(var i=0; i< array.length; i++){
     total *= array[i];
   }
   return total;

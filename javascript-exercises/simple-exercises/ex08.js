@@ -4,7 +4,6 @@ the length of the longest one.
 */
 
 var array = [ "JoeOlenick",
-              123,
               "Hippopotomonstrosesquippedaliophobia",
               "Test",
               "pneumonoultramicroscopicsilicovolcanoconiosis",
