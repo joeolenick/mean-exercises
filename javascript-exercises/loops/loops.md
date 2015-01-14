@@ -60,6 +60,48 @@ for (var i = 0; i < some_value; i++) {
 }
 ```
 
+#### Loop Keywords
+
+There are a couple keywords that can be used in both `for` and `while` loops.
+
+The `break` keyword exits the loop immediately. This is useful if you run into a situation where you don't need to complete the loop, and just want to break out of it right away. For example, if you are searching for a specific value in an array, when you find it you don't need to stay in the loop, so you break out:
+```
+var array = ["Tommy", "Richard", "Beverly", "Big Tom", "Zalinsky"];
+var value = "Richard";
+var value_found = false;
+
+for (var i = 0; i < array.length; i++) {
+  if (array[i] === value) {
+    value_found = true
+    break;
+  }
+}
+
+if (value_found) {
+  console.log(value + " is in the array!");
+}
+```
+
+The `continue` keyword breaks the current iteration of the loop. For example, if you want to print out all the elements of an array except the third, you could do this:
+```
+var array = ["Rod Kimble", "Trailer Guy", "Frank Powell", "Cathy", "Denise", "Dave"];
+
+for (var i = 0; i < array.length; i++) {
+  if (i == 2) {
+    continue;
+  }
+  console.log(array[i]);
+}
+```
+
+
+#### Additional Resources
+
+To learn more about loops, or if you just need a quick reference:
+- [W3 Schools -- For Loops](http://www.w3schools.com/js/js_loop_for.asp)
+- [W3 Schools -- While Loops](http://www.w3schools.com/js/js_loop_while.asp)
+- [W3 Schools -- Break and Continue](http://www.w3schools.com/js/js_break.asp)
+
 #### Practice exercise
 
 Try to write a function that will sort an array like this one `[1, 5, 9, 12, 4, 2, 8]`
