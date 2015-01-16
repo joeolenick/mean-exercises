@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>AJAX Demo</title>
+  </head>
+  <body>
+    <script>
+      var req = new XMLHttpRequest();
+      // Setting the XHR method, URL
+      req.open('GET', 'http://cit261-api.herokuapp.com/api');
+
+      // Setting request headers
+      req.setRequestHeader('Accept', 'application/json');
+
+      // Setting up request handlers
+      req.onreadystatechange = function handlerFunction() {
+        if (req.readyState === 4 && req.status < 400) {
+          var res = {
+            status: req.status,
+            headers: req.getAllResponseHeaders(),
+            body: JSON.parse(req.responseText)
+          };
+          console.log(res);
+        };
+      };
+
+      // Sending the request
+      req.send();
+    </script>
+  </body>
+</html>
