@@ -10,6 +10,7 @@ var maxOfThree = function(num1, num2, num3){
 console.log(maxOfThree(1,2,3));
 
 
+
 /*
 How someone else did it. (Parker Lusk)
 

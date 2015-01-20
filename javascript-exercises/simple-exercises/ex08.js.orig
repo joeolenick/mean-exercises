@@ -1,0 +1,25 @@
+/*
+8. Write a function findLongestWord() that takes an array of words and returns
+the length of the longest one.
+*/
+
+var array = [ "JoeOlenick",
+<<<<<<< HEAD
+=======
+              123,
+>>>>>>> 39659b5eb2fc7bc6f94152c15b21c9d2fe1717a9
+              "Hippopotomonstrosesquippedaliophobia",
+              "Test",
+              "pneumonoultramicroscopicsilicovolcanoconiosis",
+              "Oxyphenbutazone"];
+var findLongestWord = function(wordList){
+  if (!wordList) throw new Error('findLongestWord: Null entry');
+  var longest = 0;
+  for (var i = 0; i < wordList.length; i++) {
+    if (wordList[i].length > longest) {
+      longest = wordList[i].length;
+    }
+  }
+  return longest;
+};
+console.log(findLongestWord(array));
