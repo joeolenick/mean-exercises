@@ -26,24 +26,15 @@
  */
 document.onkeydown = function(e) {
 
-    //generate a random danger block whenever an arrow key was pressed and it is
-    // the 3rd turn
-
-    keyCodeIsInRange = e.keyCode >= '37' && e.keyCode <= '40';
-	if(keyCodeIsInRange && turnNumber % redBlockFrequency == 0) {
-
-		randomDanger();
-	}
-
-    // Most browsers pass in the key-press event as the parameter, except for
-    // Microsoft. Microsoft puts it in 'window.event'. We need this line so that
-    // if the user is using Internet Explorer for some terrible reason, they can
-    // still play our game.
+    /* Most browsers pass in the key-press event as the parameter, except for
+     * Microsoft. Microsoft is awkward and puts it in 'window.event'. We need 
+     * this line so that if the user is using Internet Explorer for some 
+     * terrible reason, they can still play our epic game.
+     *
+     * What this line means is that if the event is in 'e', then great use it.
+     * Otherwise grab it from window.event.
+     */
     e = e || window.event;
-
-    var block = document.getElementById("block");
-    var left = block.style.left;
-    var top = block.style.top;
 
     /*
      * The process for moving involves overriding the browser's default arrow 
@@ -56,26 +47,18 @@ document.onkeydown = function(e) {
 
         // Left arrow was pressed
         case 37:
-            e.preventDefault();
-            player.moveLeft(left, top);
             break;
 
         // Up arrow was pressed
         case 38:
-            e.preventDefault();
-            player.moveUp(left, top);
             break;
 
         // Right arrow was pressed
         case 39:
-            e.preventDefault();
-            player.moveRight(left, top);
             break;
 
         // Down arrow was pressed
         case 40:
-            e.preventDefault();
-            player.moveDown(left, top);
             break;
     }
 }
