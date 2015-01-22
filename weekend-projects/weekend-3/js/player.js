@@ -1,8 +1,27 @@
-/* The Player object */
+/*************************************************************************
+ * Copyright Coding Campus 2015
+ * player.js
+ *************************************************************************
+ *
+ * @description
+ * Definition for a player object.
+ * 
+ * @author
+ * Derek Argueta
+ *
+ * @date
+ * 5/29/2014
+ *
+ *************************************************************************/
 
-function Player(){
+function Player() {
 
     animating = false;
+
+    var moveCallback = function() {
+        animating = false;
+        checkStatuses();
+    }
 
     //function to move the player's block one space to the left
     Player.prototype.moveLeft = function(left, top){
@@ -26,13 +45,7 @@ function Player(){
             if(!animating){
                 animating = true;
                 var block = document.getElementById("block");
-                animateLeft(block, function() {
-                    animating = false;
-                    checkWin();
-                    checkLoss();
-                    checkPortal();
-                    console.log("after: " + block.style.left);
-                });
+                animateLeft(block, moveCallback);
             }
         }
 	};
@@ -59,13 +72,7 @@ function Player(){
             if(!animating){
                 animating = true;
                 var block = document.getElementById("block");
-                animateRight(block, function() {
-                    animating = false;
-                    checkWin();
-                    checkLoss();
-                    checkPortal();
-                    console.log("after: " + block.style.left);
-                });
+                animateRight(block, moveCallback);
             }
         }
 	};
@@ -92,12 +99,7 @@ function Player(){
             if(!animating){
                 animating = true;
                 var block = document.getElementById("block");
-                animateUp(block, function() {
-                    animating = false;
-                    checkWin();
-                    checkLoss();
-                    checkPortal();
-                });
+                animateUp(block, moveCallback);
             }
 		}
 	};
@@ -123,12 +125,7 @@ function Player(){
             if(!animating){
                 animating = true;
                 var block = document.getElementById("block");
-                animateDown(block, function() {
-                    animating = false;
-                    checkWin();
-                    checkLoss();
-                    checkPortal();
-                });
+                animateDown(block, moveCallback);
             }
         }
 	};

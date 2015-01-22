@@ -1,39 +1,36 @@
-Maze-Game
-=========
-Bored in Physics one day, I started this fun little web project. A puzzle-like 
-maze game.
-<br/><br/>
-I work on this project occasionally whenever I am not on a 
-more serious pursuit such as 
-<a href="https://github.com/derekargueta/GroupSmart-iOS" target="_blank">Group Smart</a> or any 
-work-related project. My goal is to turn this somewhat into a maze framework, 
-supporting dynamic maze sizes, user-placed objects such as walls and portals, 
-and whatnot.
-<br/><br/>
-The purpose of the game is to get from where you are (you 
-being the blue box) and get to the end goal (the yellow box). Red boxes which 
-kill you are spawned every three steps at random locations. You can use portals 
-to travel across the map, and walls block movement.
-<br/>
-You can play the game <a href="http://www.dargueta.com/JS%20Game/" target="_blank">Here</a>.
-<br/><br/>
-Installation Process:
-=====================
-<ul>
-  <li>
-    <p><a href="http://howtonode.org/how-to-install-nodejs" target="_blank">Install Node.js</a></p>
-  </li>
-  <li>
-    <p>Clone the repository down.</p>
-  </li>
-  <li>
-    <p>Through Terminal (Mac or Linux) or Git Bash (Windows), cd into the project
-    folder and run "npm install" to make sure all dependencies are installed</p>
-  </li>
-  <li>
-    <p>Run "npm start" to start the server</p>
-  </li>
-  <li>
-    <p>In your browser navigate to 127.0.0.1:3000</p>
-  </li>
-</ul>
+Weekend Exercise 3 -- Maze Game
+================================
+
+The exercise for this weekend is to create a first-person game where the user
+controls a little blue circle that can navigate through a maze of walls which it
+cannot cross, use a portal to get to the other side of the screen, be killed by
+'danger blocks', and ultimately reach an endpoint at which the user wins the
+game. No big deal, right? So let's get started!!
+
+
+In cloning the repo, you should have an index.html, some javascript files, and
+a style.css. You won't need to worry about CSS. We will have to modify the
+index.html just a bit, but most of this lab will be JavaScript.
+
+
+<h2>Step One - Hooking Things Up</h2>
+This step should be quite simple for you. All you need to do is link the
+JavaScript into the index.html file using the `<script>` tag. Link the
+JavaScript files in the following order:
+- lib.js
+- player.js
+- wall.js
+- init.js
+- statusCheck.js
+- keyboard.js
+
+Because we make use of global variables, linking them in a different order may
+cause errors. You can verify that they were linked correctly by making sure
+there's no errors in the console. You can also click on the "networks" tab in
+the Chrome dev tools and check that each file was loaded in.
+
+
+<h2>Step Two - The Arrow Keys</h2>
+Games are typically played with keyboard keys, especially arrow keys. If our
+game is going to beat Call of Duty, we probably should utilize arrows as well.
+Pop open keyboard.js.

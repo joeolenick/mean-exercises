@@ -1,3 +1,19 @@
+/*************************************************************************
+ * Copyright Coding Campus 2015
+ * wall.js
+ *************************************************************************
+ *
+ * @description
+ * Definition for a Wall object.
+ * 
+ * @author
+ * Derek Argueta
+ *
+ * @date
+ * 5/29/2014
+ *
+ *************************************************************************/
+
 function Wall(id){
     //creating the HTML entity
     obj = document.getElementById(id);
