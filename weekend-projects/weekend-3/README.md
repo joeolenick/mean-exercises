@@ -398,6 +398,12 @@ AND THAT'S IT!!
 ================================================================================================
 ================================================================================================
 
+Something important we need to address here is the process we used for programming.
+In between each step, our program (hopefully) was bug-free and actually did something.
+This is part of the <a href="http://en.wikipedia.org/wiki/Agile_software_development" target="_blank">Agile Programming</a> methodology. When we break projects down into pieces, the project should
+actually be *something* in between each of those pieces. This is an important 
+concept will hit on repeatedly in the course.
+
 <h2>Bonus</h2>
 Wanna go above and beyond? Here's some ideas if you really want to push yourself
 on this project:
