@@ -14,7 +14,10 @@
  *
  *************************************************************************/
 
-
+/*          STEP 3
+ *  ~~~~~ A D D   C O D E    H E R E ~~~~~~~
+ * Instantiate a new player object here.
+ */
 
 // This array holds the IDs of all the red blocks that kill you
 var dangerous = new Array();
@@ -62,19 +65,13 @@ function createBackground() {
 // Blocks can be made where the player is
 function randomDanger() {
 
-	//acquire a random number within the grid
-	var rand = Math.floor((Math.random() * CAGE_SIZE) + 1);
-	while(rand == 0 ||
-		dangerous.indexOf(rand) > 0 ||
-		portalIds.indexOf(rand) > 0 ||
-		wallIds.indexOf(rand) > 0) {
-
-		rand = Math.floor((Math.random() * CAGE_SIZE + 1));
-	}
-
-	var elem = document.getElementById(rand);
-	elem.className = "danger square";
-	dangerous.push(rand);
+	/*          STEP 8
+     *  ~~~~~ A D D   C O D E    H E R E ~~~~~~~
+     * Write code that generates a single random danger square that is not on top
+     * of an existing danger square, a portal, or a wall. Don't forget to add the
+     * ID or the DOM element itself to the 'dangerous' array so that we can keep
+     * track of the danger blocks.
+     */
 }
 
 function createPortal(portal1, portal2) {

@@ -22,7 +22,7 @@ function checkStatuses() {
      * the page if so
      */
     function checkLoss() {
-        /*
+        /*                  STEP 8
          *       ~~~~~ A D D   C O D E    H E R E ~~~~~~~
          * Iterate through every danger block and check if it occupies the same
          * space as the player block. If so, make a pop-up (alert) indicating 

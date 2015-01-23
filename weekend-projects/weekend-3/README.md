@@ -366,4 +366,45 @@ blocks. Then, get the background element that has that id and assign it a
 Lastly, `push` this id onto the `dangerous` global array.
 
 Now if you play the game, nothing happens because `randomDanger()` isn't being
-called anywhere. Go to keyboard.js. 
+called anywhere. Go to keyboard.js.
+
+You'll see some space commented out for step 8. Here you need to do a nifty
+if-statement that checks two things.
+- Checks if the key pressed was an arrow key (this entire onKeyDown gets fired
+for *any* button so we need to be sure it was an arrow key)
+- If it's the 3rd turn. We have a global `turnNumber` variable in init.js that gets
+incremented in statusCheck.js, so all we need to do to verify that it is a third
+turn is check if `turnNumber` is divisible by 3.
+If the two conditions are met, then you should call `randomDanger()` that you
+just filled out in init.js.
+
+Now if you start moving your player around you should see the random danger squares
+generate periodically. But they're actually not dangerous yet. They're just
+random squares. We still need to add code to check if the player actually enters
+a danger square.
+
+In statusCheck.js, there's a function called `checkLoss()` that needs to be filled out.
+As you probably guessed, this is going to check the location of our player against
+the location of all the random danger blocks, accessible via the `dangerous` array
+from init.js. If a match is found, give an `alert` indicating that the player lost
+and refresh the page, like you did with when the player wins.
+
+AND THAT'S IT!!
+
+================================================================================================
+================================================================================================
+![](http://sense-studios.com/wordpress/xangadix/files/2012/05/write_all_the_code_in_javascript1.jpg)
+================================================================================================
+================================================================================================
+
+<h2>Bonus</h2>
+Wanna go above and beyond? Here's some ideas if you really want to push yourself
+on this project:
+- Rather than having the danger blocks appear every 3 turns, have them appear
+every 3 *seconds*, regardless of whether the player moves or not.
+- When the player hits victory, the pop-up should show how long it took the
+player to complete the level.
+- Make it a multi-level game! You'll need to have a dictionary for every level
+to define where the walls/portals are and refactor init.js a bit.
+- Enable multiple portals. When you enter one, you get sent randomly to one
+of the others.
