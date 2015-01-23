@@ -398,7 +398,7 @@ AND THAT'S IT!!
 ================================================================================================
 ================================================================================================
 
-<h2>Agile Software Development
+<h2>Agile Software Development</h2>
 Something important we need to address here is the process we used for programming.
 In between each step, our program (hopefully) was bug-free and actually did something.
 This is part of the <a href="http://en.wikipedia.org/wiki/Agile_software_development" target="_blank">Agile Software Development</a> methodology. When we break projects down into pieces, the project should
