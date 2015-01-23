@@ -16,21 +16,28 @@
 
 function Wall(id){
     //creating the HTML entity
-    obj = document.getElementById(id);
-    obj.className = "wall square";
+    /*      STEP 6
+     * Assign obj to the document element that has the ID of the parameter 'id'.
+     * Then give that element the classes 'wall' and 'square'.
+     */
+    var obj;
 
     //creating the Wall object
-    this.div = document.getElementById(id);
+    this.style = obj.style;
     this.className = "wall square";
     this.type = "Wall";
     this.isWall = true;
 }
 
 Wall.createWalls = function(wallArray) {
-    var allWalls = new Array();
-    for(var x = 0; x < wallArray.length; x++){
-        var stuff = new Wall(wallArray[x]);
-        allWalls.push(stuff);
-    }
-    return allWalls;
+    /*      STEP 6
+     * Using the array of ID's that are passed in as the parameter, create an 
+     * array of new Wall objects built on those Id's. Then replace [] with your
+     * new array in the return statement.
+     *
+     * An example of creating a new Wall object would be 
+     * var test = new Wall(3);
+     * which would create a Wall object on the div that has an ID of 3.
+     */
+    return [];
 }

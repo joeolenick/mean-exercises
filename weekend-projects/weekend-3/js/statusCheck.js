@@ -16,19 +16,18 @@
  *************************************************************************/
 
 function checkStatuses() {
+
     /*
      * Checks if the player hit a danger block. Gives alert message and refreshes 
      * the page if so
      */
-    function checkLoss(){
-        var you = document.getElementById("block").style;
-        for( var x = 0; x < dangerous.length; x++){
-            var tempStyle = document.getElementById(dangerous[x]).style;
-            if(you.left == tempStyle.left && you.top == tempStyle.top){
-                alert("You LOSE!");
-                history.go(0);
-            }
-        }
+    function checkLoss() {
+        /*
+         *       ~~~~~ A D D   C O D E    H E R E ~~~~~~~
+         * Iterate through every danger block and check if it occupies the same
+         * space as the player block. If so, make a pop-up (alert) indicating 
+         * the player lost, and refresh the browser so the game restarts
+         */
     }
 
     /*
@@ -36,57 +35,52 @@ function checkStatuses() {
      * refreshes the page if so
      */
     function checkWin(){
-        turnNumber++;
-        var youStyle = document.getElementById("block").style;
-        var endStyle = document.getElementById("end").style;
-        if(youStyle.left == endStyle.left && youStyle.top == endStyle.top){
-            alert("You WIN!");
-            history.go(0);
-        }
+        /*          STEP 4
+         *       ~~~~~ A D D   C O D E    H E R E ~~~~~~~
+         * check if player is in the same spot as the victory (yellow) block If 
+         * so, make a pop-up (alert) indicating the player won, and refresh the
+         * browser so the game restarts.
+         */
     }
-
-    // function checkWall(){
-    //     var walls = levelOne[0].split(";");
-    //     var playerStyle = document.getElementById("block").style;
-    //     for(var x = 0; x < walls.length; x++){
-    //         var wallStyle = document.getElementById(walls[x]).style;
-    //     }
-    // }
 
     /*
      * Function that utilizes the inPortal() function to move the player object to
      * the other portal if it currently is in one.
      */
     function checkPortal(){
-        if(inPortal() != -1){
+        var portalIndex = inPortal(); // will be -1, 0, or 1.
+        if(portalIndex != -1){
             var block = document.getElementById("block");
 
-            if(inPortal() == portals[0]){
-                block.style.left = document.getElementById(portals[1]).style.left;
-                block.style.top = document.getElementById(portals[1]).style.top;
-            } else {
-                block.style.left = document.getElementById(portals[0]).style.left;
-                block.style.top = document.getElementById(portals[0]).style.top;
-            }
+            /*          STEP 7
+             *  ~~~~~ A D D   C O D E    H E R E ~~~~~~~
+             * if the block is in one portal, "move" the block to the other 
+             * portal by modifying the block's 'top' and 'left' values.
+             */
         }
     }
 
     /*
-     * Helper function that determines if the player object is currently inside of
-     * a portal.
+     * Helper function that determines if the player object is currently inside 
+     * of a portal.
      */
     function inPortal(){
-        var youStyle = document.getElementById("block").style;
         for(var x = 0; x < portals.length; x++){
-            var portalStyle = document.getElementById(portals[x]).style;
-            if(youStyle.left == portalStyle.left && youStyle.top == portalStyle.top){
-                return portals[x];
-            }
+            
+            /*          STEP 7
+             *  ~~~~~ A D D   C O D E    H E R E ~~~~~~~
+             * check if the player's circle is in the same location as a portal.
+             * if so, return that portal. i.e. return portal[x];
+             */
         }
+
+        // If no portals match location, then -1 will be returned.
         return -1;
     }
 
+    // run all the status checks and increment the turn number
     checkLoss();
     checkWin();
     checkPortal();
+    turnNumber++;
 }

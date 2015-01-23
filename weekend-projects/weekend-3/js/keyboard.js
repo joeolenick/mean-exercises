@@ -26,6 +26,11 @@
  */
 document.onkeydown = function(e) {
 
+    /*      STEP 8
+     * Add code to generate a danger block if an arrow key was pressed and it is
+     * the 3rd turn (any turn number divisible by 3).
+     */
+
     /* Most browsers pass in the key-press event as the parameter, except for
      * Microsoft. Microsoft is awkward and puts it in 'window.event'. We need 
      * this line so that if the user is using Internet Explorer for some 
@@ -47,18 +52,30 @@ document.onkeydown = function(e) {
 
         // Left arrow was pressed
         case 37:
+            /*      STEP 2
+             * add a console.log()
+             */
             break;
 
         // Up arrow was pressed
         case 38:
+            /*      STEP 2
+             * add a console.log()
+             */
             break;
 
         // Right arrow was pressed
         case 39:
+            /*      STEP 2
+             * add a console.log()
+             */
             break;
 
         // Down arrow was pressed
         case 40:
+            /*      STEP 2
+             * add a console.log()
+             */
             break;
     }
 }

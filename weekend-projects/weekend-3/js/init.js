@@ -1,15 +1,26 @@
-// Create a new player object
-var player = new Player();
+/*************************************************************************
+ * Copyright Coding Campus 2015
+ * init.js
+ *************************************************************************
+ *
+ * @description
+ * Initial set-up code.
+ * 
+ * @author
+ * Derek Argueta
+ *
+ * @date
+ * 5/29/2014
+ *
+ *************************************************************************/
+
+
 
 // This array holds the IDs of all the red blocks that kill you
 var dangerous = new Array();
 
-
-var ANIMATION_TIME = 100;
-
-
-// This array holds the IDs of all the portals
-var portalIds = new Array();
+// the number of tiles in the game
+var CAGE_SIZE = 180;
 
 // Turn count used to spawn the red blocks every 3 turns
 var turnNumber = 0;
@@ -33,7 +44,7 @@ var levelDefinition = {
 var wallIds = levelDefinition['walls'];
 var portals = levelDefinition['portals'];
 
-createBack();
+createBackground();
 createPortal(portals[0], portals[1]);
 
 
@@ -43,66 +54,33 @@ var wallObjs = Wall.createWalls(wallIds);
 
 // This function creates the grid of grey blocks that serve as the backdrop and 
 // can be manipulated by turning them into danger blocks, portals, etc.
-function createBack(){
+function createBackground() {
 
-	var t = 0;
-	var left = 0;
-
-	var numID = 0;
-	for(var x = 1; x < 181; x++) {
-
-		//create the element, style it, and add it in
-		var div = document.createElement("div");
-		div.className = "empty square";
-		div.id = numID;
-		div.style.top = t + 'px';
-		div.style.left = left + 'px';
-		div.type = "Nothing";
-		$("#cage").append(div);
-
-		if(x % 18 == 0){
-
-			t += 50;
-			left = 0;
-
-		} else {
-
-			left += 50;
-		}
-
-		numID++;
-	}
 }
 
 // This function creates a random danger block on a valid location on the grid. 
 // Blocks can be made where the player is
-function randomDanger(){
+function randomDanger() {
 
 	//acquire a random number within the grid
-	var rand = Math.floor((Math.random() * 140) + 1);
+	var rand = Math.floor((Math.random() * CAGE_SIZE) + 1);
 	while(rand == 0 ||
 		dangerous.indexOf(rand) > 0 ||
 		portalIds.indexOf(rand) > 0 ||
 		wallIds.indexOf(rand) > 0) {
 
-		rand = Math.floor((Math.random() * 140 + 1));
+		rand = Math.floor((Math.random() * CAGE_SIZE + 1));
 	}
 
 	var elem = document.getElementById(rand);
 	elem.className = "danger square";
-	elem.type = "Danger";
 	dangerous.push(rand);
 }
 
-function createPortal(portal1, portal2){
+function createPortal(portal1, portal2) {
 
-	var elem1 = document.getElementById(portal1);
-	var elem2 = document.getElementById(portal2);
-	elem1.className = "portal square p1";
-	portalIds.push(portal1);
-	elem2.className = "portal square p2";
-	portalIds.push(portal2);
-
-	elem1.type = "Portal";
-	elem2.type = "Portal";
+	/*          STEP 7
+     *  ~~~~~ A D D   C O D E    H E R E ~~~~~~~
+     * Create portal DOM elements and add to portalIds array
+     */
 }
