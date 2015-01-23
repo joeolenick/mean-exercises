@@ -19,9 +19,6 @@
  * Instantiate a new player object here.
  */
 
-// This array holds the IDs of all the red blocks that kill you
-var dangerous = new Array();
-
 // the number of tiles in the game
 var CAGE_SIZE = 180;
 
@@ -58,7 +55,10 @@ var wallObjs = Wall.createWalls(wallIds);
 // This function creates the grid of grey blocks that serve as the backdrop and 
 // can be manipulated by turning them into danger blocks, portals, etc.
 function createBackground() {
-
+     /*          STEP 5
+     *  ~~~~~ A D D   C O D E    H E R E ~~~~~~~
+     * Write code that generates 180 divs that act as a manipulatable background
+     */
 }
 
 // This function creates a random danger block on a valid location on the grid. 
@@ -68,9 +68,7 @@ function randomDanger() {
 	/*          STEP 8
      *  ~~~~~ A D D   C O D E    H E R E ~~~~~~~
      * Write code that generates a single random danger square that is not on top
-     * of an existing danger square, a portal, or a wall. Don't forget to add the
-     * ID or the DOM element itself to the 'dangerous' array so that we can keep
-     * track of the danger blocks.
+     * of an existing danger square, a portal, or a wall.
      */
 }
 

@@ -305,10 +305,30 @@ so that the moving animation will not execute.
 
 *hints*:
 
-- If you did the first part in wall.js correctly, then the variable `wallObjs`
-in init.js should be an array of all the wall objects. Iterate through this array
-to check each wall piece individually. You can just use `wallObjs` as is because it
-is a global variable.
+- So now we need to iterate through all the wall divs to check their location
+against ours. There's two ways you can do this.
+  - You can get all the div elements by class name 'wall'. Then, to access its
+    CSS properties by doing
+```javascript
+var walls = document.getElementsByClassName('wall');
+for(var x = 0; x < walls.length; x++) {
+  var wall = walls[x];
+  console.log(wall.style.left);
+  console.log(wall.style.top);
+}
+```
+  - The other way you can access the walls are by using the global `wallObjs` 
+  global array. Accessing the objects vs accessing the divs by class gives you
+  a slight advantage. Here's example code for accessing the walls via `wallObjs`.
+```javascript
+for(var x = 0; x < wallObjs.length; x++) {
+  var wall = wallObjs[x];
+  console.log(wall.style.left);
+  console.log(wall.style.top);
+}
+```
+  The big difference here is that `wall` is a JavaScript *object* (`Wall()`) as
+  opposed to just a DOM element.
 
 - Also, on certain lines you'll have to convert the `left` or `top` value to a number.
 Do this using the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt" target="_blank">`parseInt()`</a> function that's built into JavaScript.
@@ -363,8 +383,8 @@ danger blocks. Start off by generating a random *integer* that is between 0 and
 danger block, b) the id of a portal, or c) the id of a wall, then you need to
 get a new random number because our danger blocks can't be on top of existing
 blocks. Then, get the background element that has that id and assign it a 
-`className` of "danger square". This will give it the appearance of a danger block.
-Lastly, `push` this id onto the `dangerous` global array.
+`className` of "danger square". This will give it the appearance of a danger block
+and allow us to later find it again via its class.
 
 Now if you play the game, nothing happens because `randomDanger()` isn't being
 called anywhere. Go to keyboard.js.
@@ -386,9 +406,10 @@ a danger square.
 
 In statusCheck.js, there's a function called `checkLoss()` that needs to be filled out.
 As you probably guessed, this is going to check the location of our player against
-the location of all the random danger blocks, accessible via the `dangerous` array
-from init.js. If a match is found, give an `alert` indicating that the player lost
-and refresh the page, like you did with when the player wins.
+the location of all the random danger blocks, accessible via the 'danger' class that
+we assigned it when we first created the DOM element. If a match is found, give 
+an `alert` indicating that the player lost and refresh the page, like you did 
+with when the player wins.
 
 AND THAT'S IT!!
 
