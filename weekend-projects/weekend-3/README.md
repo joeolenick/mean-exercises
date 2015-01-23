@@ -404,6 +404,12 @@ This is part of the <a href="http://en.wikipedia.org/wiki/Agile_software_develop
 actually be *something* in between each of those pieces. This is an important 
 concept will hit on repeatedly in the course.
 
+================================================================================================
+================================================================================================
+![](http://pbs.twimg.com/media/BgxH1cVCMAENizW.png)
+================================================================================================
+================================================================================================
+
 <h2>Bonus</h2>
 Wanna go above and beyond? Here's some ideas if you really want to push yourself
 on this project:
