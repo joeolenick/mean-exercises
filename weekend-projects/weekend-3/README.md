@@ -1,5 +1,6 @@
 Weekend Exercise 3 -- Maze Game
 ================================
+Developed by Derek Argueta
 
 The exercise for this weekend is to create a first-person game where the user
 controls a little blue circle that can navigate through a maze of walls which it
