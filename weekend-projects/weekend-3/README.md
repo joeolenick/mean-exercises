@@ -30,6 +30,8 @@ cause errors. You can verify that they were linked correctly by making sure
 there's no errors in the console. You can also click on the "networks" tab in
 the Chrome dev tools and check that each file was loaded in.
 
+![](screenshots/step-1.png)
+
 ================================================================================================
 ================================================================================================
 ![](http://www.ihaveapc.com/wp-content/uploads//2013/11/swescosystem.jpg)
@@ -357,10 +359,10 @@ And your screen should now look like this:
 ![](screenshots/step-7.png)
 
 Now go to statusCheck.js and scroll down to `checkInPortal()`. This function
-should iterate through the portals in the `portals` array to check if the player
-is currently in the same location as either of the portals. If so, then change
-the players `left` and `top` values to match the *other* portal, thus teleporting
-the player. Pretty straightforward, right?
+should iterate through the portals in the `portals` array OR using `document.getElementsByClassName()` to just get all the divs with a class of 'portal', to
+check if the player is currently in the same location as either of the portals.
+If so, then change the players `left` and `top` values to match the *other*
+portal, thus teleporting the player. Pretty straightforward, right?
 
 If you wrote your `checkInPortal()` correctly, then when you move your player into
 one pink square it should *magically* teleport to the other and vice versa.
