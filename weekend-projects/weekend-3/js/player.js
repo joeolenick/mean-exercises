@@ -31,6 +31,7 @@ function Player() {
         /*      STEP 4
         *  Check the different statuses of the player after every movement animation.
         */
+        checkStatuses();
     };
 
 //function to move the player's block one space to the left
@@ -57,6 +58,7 @@ Player.prototype.moveLeft = function() {
                 * the left.
                 */
                 animateLeft(self, moveCallback);
+
             }
         }
 };
