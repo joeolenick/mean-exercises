@@ -20,7 +20,6 @@
  */
 var player = new Player();
 
-
 // the number of tiles in the game
 var CAGE_SIZE = 180;
 
@@ -29,7 +28,6 @@ var turnNumber = 0;
 
 // Determines how often the red blocks will appear.
 var redBlockFrequency = 3;
-
 
 /**
 * This defines how the level looks.
@@ -61,6 +59,34 @@ function createBackground() {
      *  ~~~~~ A D D   C O D E    H E R E ~~~~~~~
      * Write code that generates 180 divs that act as a manipulatable background
      */
+	var topHolder = -50
+	var leftHolder = 0
+
+	for (i = 0; i < CAGE_SIZE; i++){
+			var background = document.createElement("div")
+			background.className = "empty square";
+			background.id = i;
+			document.getElementById('cage').appendChild(background);
+
+
+			if (i % 18 === 0){
+
+				topHolder += 50;
+				leftHolder = 0;
+
+		}	else{
+
+				leftHolder += 50;
+
+		}
+
+		background.style.top = topHolder + "px";
+		background.style.left = leftHolder + "px";
+
+
+
+	}
+
 }
 
 // This function creates a random danger block on a valid location on the grid.
