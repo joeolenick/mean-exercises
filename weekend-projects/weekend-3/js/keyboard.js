@@ -6,7 +6,7 @@
  * @description
  * Handles key-press events and calls the appropriate function for moving the
  * player accordingly.
- * 
+ *
  * @author
  * Derek Argueta
  *
@@ -32,8 +32,8 @@ document.onkeydown = function(e) {
      */
 
     /* Most browsers pass in the key-press event as the parameter, except for
-     * Microsoft. Microsoft is awkward and puts it in 'window.event'. We need 
-     * this line so that if the user is using Internet Explorer for some 
+     * Microsoft. Microsoft is awkward and puts it in 'window.event'. We need
+     * this line so that if the user is using Internet Explorer for some
      * terrible reason, they can still play our epic game.
      *
      * What this line means is that if the event is in 'e', then great use it.
@@ -42,7 +42,7 @@ document.onkeydown = function(e) {
     e = e || window.event;
 
     /*
-     * The process for moving involves overriding the browser's default arrow 
+     * The process for moving involves overriding the browser's default arrow
      * key commands (e.preventDefault()), and then calling our custom actions to
      * occur
      *
@@ -52,30 +52,65 @@ document.onkeydown = function(e) {
 
         // Left arrow was pressed
         case 37:
-            /*      STEP 2
-             * add a console.log()
-             */
+           e.preventDefault();
+           console.log("left");
+           player.moveLeft();
+
             break;
 
         // Up arrow was pressed
         case 38:
-            /*      STEP 2
-             * add a console.log()
-             */
+           e.preventDefault();
+           console.log("up");
+           player.moveUp();
+
             break;
 
         // Right arrow was pressed
         case 39:
-            /*      STEP 2
-             * add a console.log()
-             */
+           e.preventDefault();
+           console.log("right");
+           player.moveRight();
             break;
 
         // Down arrow was pressed
         case 40:
-            /*      STEP 2
-             * add a console.log()
-             */
+           e.preventDefault();
+           console.log("down");
+           player.moveDown();
+
             break;
+
+      //Block of code for WASD in addition to the Arrows
+
+      // "a" Key was pressed
+      case 65:
+         e.preventDefault();
+         //console.log("left");
+         player.moveLeft();
+            break;
+
+      // "w" Key was pressed
+      case 87:
+         e.preventDefault();
+         //console.log("up");
+         player.moveUp();
+            break;
+
+      // "d" Key was pressed
+      case 68:
+         e.preventDefault();
+         //console.log("right");
+         player.moveRight();
+            break;
+
+      // "s" Key was pressed
+      case 83:
+         e.preventDefault();
+         //console.log("down");
+         player.moveDown();
+            break;
+
+
     }
-}
+};

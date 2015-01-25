@@ -5,7 +5,7 @@
 *
 * @description
 * Definition for a player object.
-* 
+*
 * @author
 * Derek Argueta
 *
@@ -16,11 +16,14 @@
 
 function Player() {
 
+
     /*
     * This variable is used to keep track of whether or not the player is
     * animating. The reason for this is to prevent the player from starting a
     * movement or animation while an animation is already going.
     */
+    var self = document.getElementById('block');
+
     animating = false;
 
     var moveCallback = function() {
@@ -28,10 +31,10 @@ function Player() {
         /*      STEP 4
         *  Check the different statuses of the player after every movement animation.
         */
-    }
+    };
 
-    //function to move the player's block one space to the left
-    Player.prototype.moveLeft = function() {
+//function to move the player's block one space to the left
+Player.prototype.moveLeft = function() {
 
         var self = document.getElementById('block');
 
@@ -44,7 +47,7 @@ function Player() {
         * set wallPresent to false so that the if-statement below will not
         * execute and thus not move the player.
         */
-        
+
         if(parseInt(left, 10) > parseInt("0px", 10) && !wallPresent) {
 
             if(!animating){
@@ -53,6 +56,7 @@ function Player() {
                 * Use the animation functions in lib.js to move the player to
                 * the left.
                 */
+                animateLeft(self, moveCallback);
             }
         }
 };
@@ -80,6 +84,7 @@ Player.prototype.moveRight = function() {
                 * Use the animation functions in lib.js to move the player to
                 * the right.
                 */
+                animateRight(self, moveCallback);
             }
         }
 };
@@ -106,6 +111,7 @@ Player.prototype.moveUp = function() {
                 /*      STEP 3
                 * Use the animation functions in lib.js to move the player up.
                 */
+                animateUp(self, moveCallback);
             }
 }
 };
@@ -132,6 +138,7 @@ Player.prototype.moveDown = function() {
                 /*      STEP 3
                 * Use the animation functions in lib.js to move the player down.
                 */
+                animateDown(self, moveCallback);
             }
         }
 };

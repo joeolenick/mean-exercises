@@ -5,7 +5,7 @@
  *
  * @description
  * A small library of animation functions
- * 
+ *
  * @author
  * Derek Argueta
  *

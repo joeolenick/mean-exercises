@@ -5,7 +5,7 @@
  *
  * @description
  * Initial set-up code.
- * 
+ *
  * @author
  * Derek Argueta
  *
@@ -18,6 +18,8 @@
  *  ~~~~~ A D D   C O D E    H E R E ~~~~~~~
  * Instantiate a new player object here.
  */
+var player = new Player();
+
 
 // the number of tiles in the game
 var CAGE_SIZE = 180;
@@ -31,7 +33,7 @@ var redBlockFrequency = 3;
 
 /**
 * This defines how the level looks.
-* 
+*
 * - the int array for 'walls' is a list containing the ID's of the background
 * squares that should be turned into walls.
 *
@@ -52,7 +54,7 @@ var wallObjs = Wall.createWalls(wallIds);
 
 
 
-// This function creates the grid of grey blocks that serve as the backdrop and 
+// This function creates the grid of grey blocks that serve as the backdrop and
 // can be manipulated by turning them into danger blocks, portals, etc.
 function createBackground() {
      /*          STEP 5
@@ -61,7 +63,7 @@ function createBackground() {
      */
 }
 
-// This function creates a random danger block on a valid location on the grid. 
+// This function creates a random danger block on a valid location on the grid.
 // Blocks can be made where the player is
 function randomDanger() {
 
