@@ -44,7 +44,7 @@ function checkStatuses() {
          * browser so the game restarts.
          */
 
-         if (self.style.left && self.style.top === end.style.left && end.style.top){
+         if (self.style.left === end.style.left && self.style.top === end.style.top){
             if(alert('Woot! You did it :D')){}
             else    window.location.reload();
 

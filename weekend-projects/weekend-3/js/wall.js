@@ -5,7 +5,7 @@
  *
  * @description
  * Definition for a Wall object.
- * 
+ *
  * @author
  * Derek Argueta
  *
@@ -20,8 +20,8 @@ function Wall(id){
      * Assign obj to the document element that has the ID of the parameter 'id'.
      * Then give that element the classes 'wall' and 'square'.
      */
-    var obj;
-
+    var obj = document.getElementById(id);
+    obj.className = "wall square";
     //creating the Wall object
     this.style = obj.style;
     this.className = "wall square";
@@ -31,13 +31,21 @@ function Wall(id){
 
 Wall.createWalls = function(wallArray) {
     /*      STEP 6
-     * Using the array of ID's that are passed in as the parameter, create an 
+     * Using the array of ID's that are passed in as the parameter, create an
      * array of new Wall objects built on those Id's. Then replace [] with your
      * new array in the return statement.
      *
-     * An example of creating a new Wall object would be 
+     * An example of creating a new Wall object would be
      * var test = new Wall(3);
      * which would create a Wall object on the div that has an ID of 3.
      */
-    return [];
-}
+     var newWall = [];
+     for(i = 0; i< wallArray.length; i++){
+        //walls.push(Wall(levelDefinition.walls[i]));
+        var x = new Wall(wallArray[i]);
+        newWall.push(x);
+
+     }
+    console.log(newWall[1]);
+    return newWall;
+};
