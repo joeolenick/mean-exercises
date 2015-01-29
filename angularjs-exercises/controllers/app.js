@@ -1,9 +1,9 @@
 angular.module('profileApp', [])
 
 .controller('profileController', function ($scope) {
-  var profile_image = 'http://i.ytimg.com/vi/URTTK2V2CAE/hqdefault.jpg';
-  var name = 'Yzma';
-  var eye_color = 'blue';
-  var expression = 'surprise';
-  var thoughts = 'Is that my voice? Is that myyyyyy voice?';
+  $scope.name = 'Yzma';
+  $scope.eye_color = 'blue';
+  $scope.expression = 'surprise';
+  $scope.thoughts = 'Is that my voice? Is that myyyyyy voice?';
+  $scope.profile_image = "http://i.ytimg.com/vi/URTTK2V2CAE/hqdefault.jpg";
 });
