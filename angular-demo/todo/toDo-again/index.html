@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="todo"> <!--Allows the App to work withing any element within this tag. -->
+   <head>
+      <title>Angular ToDo List</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <h1>ToDo App</h1>
+      <div ng-controller="toDoCtrl">
+         <div>
+            <p>New toDo:<input type="text" ng-model='newToDo'>
+               <button ng-click="addToDo()">+</button>  </p>
+         </div>
+         <div>
+            <ul>
+               <li ng-repeat="toDo in toDos" ng-class='{"done":toDo.done}'>
+                  <input type="checkbox" ng-model="toDo.done">
+                  {{toDo.title}}
+                  <a href="javascript:;">Edit</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+      <script src="app.js"></script>
+   </body>
+</html>

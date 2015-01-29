@@ -2,11 +2,13 @@
 <html ng-app="profileApp">
 	<head>
 		<title>Profile App</title>
-		
+
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
 		<script src="app.js"></script>
 	</head>
-	
-	<body ng-controller="profileController">
+
+	<body data-ng-controller="profileController">
+		<img data-ng-model="{{profileController.profile_image}}"  width="300px;" height="300px;">
+
 	</body>
 </html>

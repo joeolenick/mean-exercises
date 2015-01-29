@@ -1,0 +1,26 @@
+* {
+   box-sizing: border-box;
+}
+
+ul {
+   list-style-type: none;
+   margin:0;
+   padding:0;
+}
+.done {
+   color:#e7e7e7;
+   text-decoration: line-through;
+}
+
+.toDoApp {
+   border: 1px solid blue;
+   padding:10px;
+   max-width:500px;
+   border-radius: 4px;
+}
+
+.toDoHeader {
+   border-bottom:1px solid blue;
+   margin:-10px -10px 0;
+   padding:10px;
+}

@@ -59,7 +59,7 @@ function createBackground() {
      *  ~~~~~ A D D   C O D E    H E R E ~~~~~~~
      * Write code that generates 180 divs that act as a manipulatable background
      */
-	var topHolder = -50
+	var topHolder = 0
 	var leftHolder = 0
 
 	for (i = 0; i < CAGE_SIZE; i++){
