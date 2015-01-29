@@ -15,6 +15,9 @@ It's important that you write your HTML code legibly (by using unequivocal class
 
 Here are the screenshots of what your shopping cart should look like. You are welcome to design your cart in whatever way you like, as long as it has all the required elements.
 
+### Cart View
+![cart](https://github.com/CodingCampus/mean-exercises/blob/master/weekend-projects/weekend-4/images/ShoppingCart.png)
+
 ```
 #AdvancedWebDevelopmentClass .interest .brain {
   display: none;
@@ -24,6 +27,10 @@ Here are the screenshots of what your shopping cart should look like. You are we
 (from csshumor.com)
 ```
 
+### Payment Info
+![payment](https://github.com/CodingCampus/mean-exercises/blob/master/weekend-projects/weekend-4/images/Payment.png)
+![payment2](https://github.com/CodingCampus/mean-exercises/blob/master/weekend-projects/weekend-4/images/Payment2.png)
+
 ```
 .narcissist {
   position: absolute;
@@ -32,6 +39,9 @@ Here are the screenshots of what your shopping cart should look like. You are we
 
 (from csshumor.com)
 ```
+
+### Review Order
+![review](https://github.com/CodingCampus/mean-exercises/blob/master/weekend-projects/weekend-4/images/Review.png)
 
 ```
 .thumbs { vertical-align: top; }
