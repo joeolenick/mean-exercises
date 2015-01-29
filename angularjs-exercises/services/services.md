@@ -2,7 +2,7 @@
 
 Services are the model part of the [MVC architecture](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller). In general, you should access your data from services. If you're planning on creating a real MVC implementation, your business logic should reside in services as well.
 
-### 1. Service to view
+### Display the product data
 
 The goal of this exercise is to display a product with its information using an angular service.
 
@@ -62,5 +62,3 @@ angular.module('productApp', [])
 ```
 
 [Here is a good example of angular services](http://fdietz.github.io/recipes-with-angular-js/controllers/sharing-code-between-controllers-using-services.html)
-
-### 2. Make your own service
