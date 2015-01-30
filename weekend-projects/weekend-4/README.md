@@ -48,3 +48,7 @@ Here are the screenshots of what your shopping cart should look like. You are we
 
 (from csshumor.com)
 ```
+
+### Order Complete
+![complete](https://github.com/CodingCampus/mean-exercises/blob/master/weekend-projects/weekend-4/images/Complete.png)
+![complete2](https://github.com/CodingCampus/mean-exercises/blob/master/weekend-projects/weekend-4/images/Complete2.png)
