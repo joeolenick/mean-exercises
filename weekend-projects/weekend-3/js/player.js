@@ -48,6 +48,16 @@ Player.prototype.moveLeft = function() {
         * set wallPresent to false so that the if-statement below will not
         * execute and thus not move the player.
         */
+        for(var i = 0; i < wallObjs.length; i++) {
+           var wall = wallObjs[i];
+           if (self.style.left === wall.style.left
+                 &&
+               self.style.top === wall.style.top){
+             wallPresent = true;
+          }
+
+        }
+
 
         if(parseInt(left, 10) > parseInt("0px", 10) && !wallPresent) {
 
