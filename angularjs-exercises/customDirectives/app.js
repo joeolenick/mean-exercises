@@ -12,10 +12,13 @@ angular.module('demo', [])
     { name: 'Derek',   type: 'teacher' },
     { name: 'Josh',    type: 'teacher' },
   ];
+  $scope.buildTitleParent = function(person) {
+    return person.name + ' is a ' + person.type + ' at coding campus.';
+  };
 })
-.directive('person', function() {
+.directive('personDirective', function() {
   var linkFunc = function(scope) {
-    scope.buildTitle = function(person) {
+    scope.buildTitleChild = function(person) {
       return person.name + ' is a ' + person.type + ' at coding campus.';
     };
   };
@@ -26,6 +29,6 @@ angular.module('demo', [])
     scope    : {
       person : '='
     },
-    template : '<div class="person"><ul><li>{{ person.name }}</li><li>{{ person.type }}</li><li>{{ buildTitle(person) }}</li></ul></div>'
+    template : '<div class="person"><h1>{{ person.name }}</h1><h2>{{ buildTitleChild(person) }}</h2></div>'
   };
 });

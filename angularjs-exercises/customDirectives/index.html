@@ -6,10 +6,14 @@
 </head>
 <body ng-controller="demoCtrl">
   <h1>People</h1>
-  <ul>
-    <li ng-repeat="person in people">{{person}}</li>
-  </ul>
-  <person ng-repeat="person in people" person="person"></person>
+  <div ng-repeat="person in people">
+    <div class="person">
+      <h1>{{ person.name }}</h1>
+      <h2>{{ buildTitleParent(person) }}</h2>
+    </div>
+  </div>
+  <h1>Directive</h1>
+  <person-directive ng-repeat="indvPerson in people" person='indvPerson'></person-directive>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
   <script src="app.js"></script>
 </body>
