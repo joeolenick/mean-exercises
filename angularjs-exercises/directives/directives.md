@@ -52,3 +52,43 @@ angular.module('appName', [])
 	};
 });
 ```
+
+### Exercise 2
+
+### Exercise 2
+
+You have made an input field that is bound to the scope with a lovely `ng-model` directive. You want to call a function every time the user presses the enter key in the box, but you have no way to do that with only angular. Thus, you decide to write you own directive to make up for the neglect emanating from the slackers at Google.
+
+Make a directive that will call a function every time the enter key is pressed within the input tag.
+
+Here is what the input tag with the `on-enter-key` directive should look like:
+```
+<input type="text" ng-model="input_name" on-enter-key="submit"> {{ name }}
+```
+
+Here is what your `app.js` file should look like:
+```
+angular.module('angularApp', [])
+.controller( function ($scope) {
+  $scope.name = 'Saggitariutt Jefferspin';
+  
+  $scope.sumbit = function () {
+    $scope.name = $scope.input_name;
+  };
+})
+.directive('onEnterKey', function () {
+  return {
+    restrict: 'A',
+    replace: false,
+    scope: {
+      onEnterKey: '='
+    },
+    link: function (scope, element, attributes) {
+    }
+  };
+});
+```
+
+Basically, the directive receives a callback function called `submit` (it's in the controller scope), and your job is to call that function every time the enter key is pressed within the text box.
+
+You'll probably have to Google around to find the solution to this one. Good luck!
