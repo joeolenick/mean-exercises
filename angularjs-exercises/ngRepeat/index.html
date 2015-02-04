@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+  <title>ng Repeat</title>
+  <style>
+    .gangnam {
+      color:green;
+    }
+  </style>
+</head>
+<body ng-controller="test">
+  <p>강남 Style: <input type="checkbox" ng-model="style"></p>
+  <p>Hello {{myName}}</p>
+  <input type="text" ng-model="myName">
+  <ul>
+  <li ng-repeat="person in array" ng-show="show(person)" ng-class="{ 
+  'gangnam':style, 'harlem':shake 
+  }">
+  {{person.name}}
+  {{person.age}}
+  </li>
+  </ul>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
