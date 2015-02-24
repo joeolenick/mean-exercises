@@ -1,0 +1,203 @@
+/*Whole Page*/
+
+p{
+   margin:0;
+   padding: 3px;
+   float: left;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+}
+
+a:link{ 
+   color:#9933CC;
+   text-decoration: none;
+   cursor: auto;
+}
+a:visited{
+   color:#AD5CD6;
+   text-decoration: none;
+   cursor: auto;
+
+}
+
+
+/*Header CSS*/
+
+#header {
+   height: 100px;
+   margin: 0;
+   padding: 0;
+   background: black;
+   margin-left: 0;
+   margin-right: 0;
+}
+
+#logoimage {
+   height: 75px;
+   width: 75px;
+   margin-top: 10px;
+   margin-left: 5px;
+   display: inline;
+   float:left;
+}
+
+#header h1{
+   color: #9933CC;
+   position: relative;
+   top: 80%;
+   right: 40px;
+   float:right;
+}
+
+/*Body CSS*/
+
+.order-subtotal-container {
+   background-color: #E6E6E6;
+   height: 40px;
+   width: 100%;
+}
+
+         #order-price{
+            font-weight: bold;
+            margin-top: 5px;
+            margin-right: 25px;
+            display:inline-block;
+            background-color:#CDCDCD;
+            border-radius: 15px;
+         }
+
+         .check-out-button-container{
+            display:inline-block;
+            float: right;
+         }
+         .check-out-button{
+            font-weight:bolder;
+            font-size:12pt;
+            display:inline-block;
+            float: right;
+            border-radius:15%;
+            margin-right:10px;
+            background-color:#9933CC;
+         }
+
+
+#page-name{
+   padding-left: 30px;
+   padding-top: 15px;
+   padding-bottom: 15px;
+}
+
+.item {
+   border-radius: 15px;
+   border-color: #000000;
+   border-style: solid;
+   border-width: 1px;
+   background-color: #E6E6E6;
+   height: 85px;
+   width: 600px;
+   margin: 15px;
+   padding:0px;
+
+}
+
+         .item-image{            
+            border-color: #000000;
+            border-style: solid;
+            border-width: 1px;
+            display: inline-block;
+            height: 60px;
+            width: 55px;
+            margin: 5px;
+            border-radius: 15px;
+            padding:5px;
+            padding-top:6px;
+            float:left;
+
+         }
+         .item-description{
+            display: inline-block;
+            height: 80px;
+            width: 250px;
+            margin: 1px;
+            float:left;            
+         }
+
+         .item-price{
+            display: inline-block;
+            height: 20px;
+            width: 75px;
+            margin: 5px;
+            border-radius: 15px;
+            float:left;
+         }
+
+         .item-is-gift{
+            display: inline-block;
+            height: 20px;
+            width: 70px;
+            margin: 5px;
+            float:left;
+         }
+
+               .item-qty-dlt-grp{
+                  display: inline-block;
+                  height: 20px;
+                  width: 80px;
+                  margin: 5px;
+                  float:left;
+               }
+
+               .item-quantity{
+                  display: inline-block;
+                  height: 20px;
+                  width: 80px;
+                  margin: 5px;
+                  float:left;
+               }
+
+               .isDeleted{
+                  display: inline-block;
+                  height: 20px;
+                  width: 90px;
+                  margin: 0px;
+                  float: left;
+                  text-align: right;
+                  position: relative;
+                  bottom: -29;
+               }
+
+/*Footer CSS*/
+#footer{
+   width:100%;
+   height:80px;
+   bottom:0;
+   left:0;
+   background: black;
+}
+
+#navigationContainer{
+   display: inline-block;
+   width: 1000px;
+   margin: 0px;
+   float: left;
+   text-align: right;
+}
+
+#navigationTable{
+   display: inline-block;
+   width: 900px;
+   margin: 0px;
+   float: left;
+   text-align: right;
+}
+
+.navTableHead{
+   display: inline-block;
+   width: 190px;
+   margin: 0px;
+   float: left;
+   text-align: right;
+}

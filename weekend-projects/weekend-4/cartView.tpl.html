@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="./css/cartView.css">
+<div class="order-subtotal-container">
+	<div id="order-subtotal">
+		<p id="order-price">Order Subtotal (# items): $0.00</p>
+	</div>
+
+	<div id="check-out-button-container"> <button class="check-out-button" type="button">Proceed to checkout</button> </div>
+</div>
+
+<div id="body" ng-controller="shoppingCartItems">
+	<p>{{data}} </p>
+
+	<h3 id="page-name">Shopping Cart</h3>
+	<div id="main-container">
+	<!-- This is a single item div. We will repeat this-->
+
+	<div class="item" ng-repeat"item in cartContents">
+		<div class="item-image"><img src="{{item.image_url}}"> </div>
+		<div class="item-description"><p> {{item.name}}{{item.description}} </p></div>
+		<div class="item-price"><p>Price: {{item.price}} </p></div>
+		<div class="item-is-gift"><p>is-gift</p></div>
+		<div class="item-qty-dlt-grp">
+			<div class="item-quantity">
+				<p>Qty: 
+					<select> 
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>s
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</p>
+			</div>
+			<div class="isDeleted"><a href="#">delete</a> </p></div>
+		</div>
+
+
+	</div><!-- END OF ITEM-->
+</div>
+</div>
